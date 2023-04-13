@@ -2,6 +2,7 @@ return {
     {
         "rebelot/heirline.nvim",
         opts = function(_, opts)
+            local navic = require("nvim-navic")
             local status = require("astronvim.utils.status")
             opts.statusline = {
                 -- statusline
@@ -17,6 +18,14 @@ return {
                 status.component.lsp(),
                 status.component.treesitter(),
                 status.component.nav()
+            }
+            opts.winbar = {
+                condition = function()
+                    return navic.get_location()
+                end,
+                provider = function()
+                    return navic.get_location()
+                end
             }
             return opts
         end

@@ -9,9 +9,6 @@ local bg_alt = get_hlgroup("Visual").bg
 local green = get_hlgroup("String").fg
 local red = get_hlgroup("Error").fg
 
--- base	#EFF1F5	#303446	#24273A	#1E1E2E	Default bg
-local bg = "#24273A"
-
 return {
     -- set telescope
     TelescopeBorder = {fg = bg_alt, bg = bg},

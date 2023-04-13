@@ -15,5 +15,9 @@ return {
     {
         "projekt0n/github-nvim-theme",
         tag = "v0.0.7"
+    },
+    {
+        "EdenEast/nightfox.nvim"
     }
+
 }
