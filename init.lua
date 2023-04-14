@@ -15,11 +15,12 @@ return {
     -- Set colorscheme to use
     -- colorscheme = "catppuccin-macchiato",
     -- colorscheme = "duskfox",
-    colorscheme = "kanagawa-wave",
+    -- colorscheme = "kanagawa-wave",
     -- colorscheme = "kanagawa-dragon",
     -- colorscheme = "tokyonight-night",
     -- colorscheme = "kanagawa",
-
+    -- colorscheme = "oxocarbon",
+    colorscheme = "rose-pine",
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
         virtual_text = true,
