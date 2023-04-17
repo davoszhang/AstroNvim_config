@@ -20,7 +20,8 @@ return {
     -- colorscheme = "tokyonight-night",
     -- colorscheme = "kanagawa",
     -- colorscheme = "oxocarbon",
-    colorscheme = "rose-pine",
+    -- colorscheme = "rose-pine",
+    colorscheme = "monokai-pro",
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
         virtual_text = true,
