@@ -10,6 +10,7 @@ return {
       -- })
       -- require("scrollbar.handlers.gitsigns").setup()
       require("scrollbar").setup()
+      require("scrollbar.handlers.gitsigns").setup()
     end,
   }
 }
