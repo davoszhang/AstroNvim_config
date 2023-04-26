@@ -2,7 +2,7 @@ return {
   {
     -- "kevinhwang91/nvim-hlslens",
     "petertriho/nvim-scrollbar",
-    lazy = false,
+    event = "BufEnter",
     config = function()
       -- require('hlslens').setup() is not required
       -- require("scrollbar.handlers.search").setup({

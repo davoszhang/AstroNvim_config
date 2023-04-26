@@ -1,0 +1,46 @@
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--   callback = function()
+--     require("lint").try_lint()
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+--   callback = function()
+--     require("lint").try_lint()
+--   end,
+-- })
+
+-- return {
+--   {
+--     "mfussenegger/nvim-lint",
+--     lazy = false,
+--     config = function()
+--       local lint = require('lint')
+--       lint.linters.cargo = {
+--         cmd = 'cargo check',
+--         stdin = true,
+--         args = {},
+--         stream = 'both',
+--         ignore_exitcode = false,
+--         env = nil,
+--       }
+--
+--       -- set linters by langs
+--       lint.linters_by_ft = {
+--         go = { 'golangcilint' },
+--         rust = { 'cargo' },
+--       }
+--
+--       -- config by golang
+--       local golangcilint = require("lint.linters.golangcilint")
+--       -- todo try get from config
+--       golangcilint.append_fname = true
+--       golangcilint.args = {
+--         'run',
+--         '--out-format',
+--         'json',
+--       }
+--     end
+--   }
+-- - }
+return {}

@@ -1,13 +1,13 @@
 return {
     {
         "gelguy/wilder.nvim",
-        lazy = false,
+        event = { "CmdlineEnter" },
         dependencies = {
             "romgrk/fzy-lua-native"
         },
         config = function()
             local wilder = require("wilder")
-            wilder.setup({modes = {":", "/", "?"}})
+            wilder.setup({ modes = { ":", "/", "?" } })
 
             -- Disable Python remote plugin
             wilder.set_option("use_python_remote_plugin", 0)
@@ -36,8 +36,8 @@ return {
                                 -- pumblend = 50,
                                 max_height = "20%",
                                 highlighter = wilder.lua_fzy_highlighter(),
-                                left = {" ", wilder.popupmenu_devicons()},
-                                right = {" ", wilder.popupmenu_scrollbar()}
+                                left = { " ", wilder.popupmenu_devicons() },
+                                right = { " ", wilder.popupmenu_scrollbar() }
                             }
                         ),
                         ["/"] = wilder.popupmenu_renderer(
@@ -45,8 +45,8 @@ return {
                                 -- pumblend = 50,
                                 max_height = "20%",
                                 highlighter = wilder.lua_fzy_highlighter(),
-                                left = {" ", wilder.popupmenu_devicons()},
-                                right = {" ", wilder.popupmenu_scrollbar()}
+                                left = { " ", wilder.popupmenu_devicons() },
+                                right = { " ", wilder.popupmenu_scrollbar() }
                             }
                         )
                     }

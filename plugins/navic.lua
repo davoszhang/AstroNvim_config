@@ -4,7 +4,7 @@ return {
         dependencies = {
             "neovim/nvim-lspconfig"
         },
-        lazy = false,
+        event = "BufEnter",
         config = function()
             require("nvim-navic").setup {
                 highlight = true

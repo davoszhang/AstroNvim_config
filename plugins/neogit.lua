@@ -1,8 +1,7 @@
 return {
   {
     "TimUntersberger/neogit",
-    -- event = " CmdlineEnter",
-    lazy = false,
+    event = "CmdlineEnter",
     config = function()
       require('neogit').setup({
         integrations = {
