@@ -8,7 +8,7 @@ return {
     n = {
         -- second key is the lefthand side of the map
         -- mappings seen under group name "Buffer"
-        ["<leader>bn"] = {"<cmd>tabnew<cr>", desc = "New tab"},
+        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
         ["<leader>bD"] = {
             function()
                 require("astronvim.utils.status").heirline.buffer_picker(
@@ -21,13 +21,13 @@ return {
         },
         -- tables with the `name` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        ["<leader>b"] = {name = "Buffers"},
+        ["<leader>b"] = { name = "Buffers" },
         -- quick save
-        ["<C-s>"] = {":w!<cr>", desc = "Save File"},
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
         -- split
-        ["\\"] = {"<cmd>vsplit<cr>", desc = "Vertical Split"},
-        ["-"] = {"<cmd>split<cr>", desc = "Horizontal Split"},
-        ["<leader>b\\"] = {
+        ["\\"] = { "<cmd>vsplit<cr>", desc = "Vertical Split" },
+        ["-"] = { "<cmd>split<cr>", desc = "Horizontal Split" },
+        ["<leader>b-"] = {
             function()
                 require("astronvim.utils.status").heirline.buffer_picker(
                     function(bufnr)
@@ -38,7 +38,7 @@ return {
             end,
             desc = "Horizontal split buffer from tabline"
         },
-        ["<leader>b|"] = {
+        ["<leader>b\\"] = {
             function()
                 require("astronvim.utils.status").heirline.buffer_picker(
                     function(bufnr)
@@ -48,6 +48,9 @@ return {
                 )
             end,
             desc = "Vertical split buffer from tabline"
+        },
+        ["<leader>fd"] = {
+            "<cmd>Telescope file_browser<cr>", desc = "Telescope file browser"
         }
     },
     t = {}

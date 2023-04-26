@@ -17,7 +17,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    lazy = false,
+    event = { "CmdlineEnter" },
     config = function()
       require("spectre").setup({})
     end
