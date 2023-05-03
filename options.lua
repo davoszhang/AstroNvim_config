@@ -9,9 +9,9 @@ return {
         wrap = false,           -- sets vim.opt.wrap
         showtabline = 0,
         background = "dark",
-        winbar = nil,
-        list = true,
-        listchars = { space = ".", tab = "│·", eol = "↴" }
+        -- winbar = nil,
+        -- list = true,
+        -- listchars = { space = ".", tab = "│·", eol = "↴" }
     },
     g = {
         mapleader = " ",                 -- sets vim.g.mapleader

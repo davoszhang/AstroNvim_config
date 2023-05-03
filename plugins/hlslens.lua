@@ -1,11 +1,9 @@
 return {
   {
     "kevinhwang91/nvim-hlslens",
+    event = "BufEnter",
     config = function()
-      -- require('hlslens').setup() is not required
-      require("scrollbar.handlers.search").setup({
-        -- hlslens config overrides
-      })
+      require("scrollbar.handlers.search").setup({})
     end,
   }
 }

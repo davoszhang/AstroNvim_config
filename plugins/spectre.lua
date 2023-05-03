@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', {
+vim.keymap.set('n', '<leader>ss', '<cmd>lua require("spectre").open()<CR>', {
   desc = "Open Spectre"
 })
 vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {

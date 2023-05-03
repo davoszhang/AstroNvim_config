@@ -1,20 +1,44 @@
 -- get highlights from highlight groups
 -- https://astronvim.com/Recipes/telescope_theme
 -- https://github.com/catppuccin/nvim
+-- local Color                  = require('color')
+-- local Color                  = require('glance.color')
 
-local get_hlgroup = require("astronvim.utils").get_hlgroup
-local normal = get_hlgroup "Normal"
-local fg, bg = normal.fg, normal.bg
-local bg_alt = get_hlgroup("Visual").bg
-local green = get_hlgroup("String").fg
-local red = get_hlgroup("Error").fg
+local normal                 = require("astronvim.utils").get_hlgroup "Normal"
+local visual                 = require("astronvim.utils").get_hlgroup "Visual"
+local red                    = require("astronvim.utils").get_hlgroup "Error"
+
+-- check if it's "monokai-pro" theme
+local monokai_avail, monokai = pcall(require, "monokai-pro")
+local is_monokai_pro         = monokai_avail and vim.g.colors_name == "monokai-pro"
 
 return {
-    -- set telescope
-    TelescopeBorder = {fg = bg_alt, bg = bg},
-    TelescopeNormal = {bg = bg},
-    TelescopePreviewTitle = {fg = bg, bg = green},
-    TelescopePromptTitle = {fg = bg, bg = red},
-    TelescopeResultsNormal = {bg = bg},
-    TelescopeResultsTitle = {fg = bg, bg = bg}
+  -- set the nvim-cmp coloe hightlights
+  CmpBackground = {
+    bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+    fg = normal.fg,
+  },
+  CmpFloatBorder = {
+    bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+    fg = is_monokai_pro and monokai.get_base_color().dimmed3 or normal.fg
+  },
+  CmpCursorLine = {
+    bg = is_monokai_pro and monokai.get_base_color().dimmed4 or visual.bg,
+    fg = red.fg,
+    bold = true
+  },
+  -- set the lspsaga highlight for monokai
+  -- SagaNormal = {
+  -- },
+  -- SagaBorder = {
+  -- },
+  -- OutlinePreviewBorder = {
+  --   bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+  --   fg = normal.fg,
+  -- },
+  -- OutlinePreviewNormal = {
+  --   bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+  --   fg = normal.fg,
+  -- },
+  -- OutlineWinSeparator = { link = 'WinSeparator' },
 }

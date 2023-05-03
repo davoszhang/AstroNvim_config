@@ -49,8 +49,26 @@ return {
             end,
             desc = "Vertical split buffer from tabline"
         },
-        ["<leader>fd"] = {
-            "<cmd>Telescope file_browser<cr>", desc = "Telescope file browser"
+        ["tf"] = {
+            "<cmd>:ToggleTerm<CR>", desc = "float term"
+        },
+        ["t\\"] = {
+            "<cmd>:ToggleTerm direction=vertical<CR>", desc = "float term vertical"
+        },
+        ["t-"] = {
+            "<cmd>:ToggleTerm direction=horizontal<CR>", desc = "float term horizontal"
+        },
+        ["ff"] = {
+            "<cmd>:Telescope fd<CR>", desc = "find files"
+        },
+        ["fd"] = {
+            "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "find dirs in current path"
+        },
+        ["fb"] = {
+            "<cmd>Telescope buffers<CR>", desc = "find dirs in current path"
+        },
+        ["fcf"] = {
+            "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "fuzzy find in current buffer"
         }
     },
     t = {}

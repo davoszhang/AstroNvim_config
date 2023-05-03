@@ -76,8 +76,36 @@ return {
     {
         "loctvl842/monokai-pro.nvim",
         config = function()
+            -- re
             require("monokai-pro").setup({
                 filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
+                styles = {
+                    comment = { italic = false, bold = true },
+                    keyword = { italic = false, bold = true }, -- any other keyword
+                    type = { italic = false },                 -- (preferred) int, long, char, etc
+                    storageclass = { italic = true },          -- static, register, volatile, etc
+                    structure = { italic = true },             -- struct, union, enum, etc
+                    parameter = { italic = true },             -- parameter pass in function
+                    annotation = { italic = true },
+                    tag_attribute = { italic = true },         -- attribute of tag in reactjs
+                },
+                background_clear = {
+                    -- "float_win",
+                    -- "toggleterm",
+                    "telescope",
+                    -- "neo-tree",
+                }, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree"
+                -- transparent_background = true,
+                plugins = {
+                    -- bufferline = {
+                    --     underline_selected = false,
+                    --     underline_visible = false,
+                    -- },
+                    nvim_cmp = {
+                        context_highlight = "default", -- default | pro
+                        -- context_start_underline = false,
+                    },
+                },
             })
         end
     }
