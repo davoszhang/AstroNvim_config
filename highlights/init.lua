@@ -13,7 +13,7 @@ local monokai_avail, monokai = pcall(require, "monokai-pro")
 local is_monokai_pro         = monokai_avail and vim.g.colors_name == "monokai-pro"
 
 return {
-  -- set the nvim-cmp coloe hightlights
+  -- set the nvim-cmp color highlights
   CmpBackground = {
     bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
     fg = normal.fg,
@@ -28,8 +28,10 @@ return {
     bold = true
   },
   -- set the lspsaga highlight for monokai
-  -- SagaNormal = {
-  -- },
+  SagaNormal = {
+    bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+    fg = normal.fg,
+  },
   -- SagaBorder = {
   -- },
   -- OutlinePreviewBorder = {
