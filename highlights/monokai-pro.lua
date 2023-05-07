@@ -25,4 +25,12 @@ return {
     bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
     fg = normal.fg,
   },
+  -- TelescopePathSeparator = {
+  --   bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+  --   fg = normal.fg,
+  -- }
+  TelescopeQueryFilter = {
+    bg = is_monokai_pro and monokai.get_base_color().dimmed5 or normal.bg,
+    fg = normal.fg,
+  }
 }

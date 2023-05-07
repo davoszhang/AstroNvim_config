@@ -1,4 +1,4 @@
 -- enable servers that you already have installed without mason
 return {
-    "gopls"
+    "gopls", "lua_ls"
 }

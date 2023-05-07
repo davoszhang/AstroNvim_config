@@ -17,10 +17,14 @@ return {
           layout_config = {
             horizontal = {
               prompt_position = "bottom",
-              preview_width = 0.50,
-              width = 0.50,
-              height = 0.50,
+              preview_width = 0.55,
             },
+            vertical = {
+              mirror = false,
+            },
+            width = 0.70,
+            height = 0.65,
+            preview_cutoff = 120,
           },
           mappings = {
             i = {
@@ -34,8 +38,5 @@ return {
         },
       }
     end,
-    config = function()
-      require("telescope").load_extension "file_browser"
-    end
   }
 }

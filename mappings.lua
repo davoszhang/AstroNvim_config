@@ -65,11 +65,14 @@ return {
             "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "find dirs in current path"
         },
         ["fb"] = {
-            "<cmd>Telescope buffers<CR>", desc = "find dirs in current path"
+            "<cmd>Telescope buffers<CR>", desc = "find buffers"
         },
         ["fcf"] = {
             "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "fuzzy find in current buffer"
-        }
+        },
+        ["fff"] = {
+            "<cmd>Telescope frecency workspace=CWD<CR>", desc = "frecency find in current workspace"
+        },
     },
     t = {}
 }

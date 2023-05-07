@@ -28,6 +28,8 @@ return {
           }
         }
       }
+      -- add to telescope
+      require("telescope").load_extension "file_browser"
     end
   }
 }
