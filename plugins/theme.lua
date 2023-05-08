@@ -78,6 +78,7 @@ return {
         config = function()
             -- re
             require("monokai-pro").setup({
+                transparent_background = false,
                 filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
                 styles = {
                     comment = { italic = false, bold = true },
@@ -97,15 +98,23 @@ return {
                 }, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree"
                 -- transparent_background = true,
                 plugins = {
-                    -- bufferline = {
-                    --     underline_selected = false,
-                    --     underline_visible = false,
-                    -- },
                     nvim_cmp = {
                         context_highlight = "default", -- default | pro
-                        -- context_start_underline = false,
                     },
                 },
+                override = function(c)
+                    return {
+                        ColorColumn = { bg = c.base.dimmed3 },
+                        -- Mine
+                        DashboardRecent = { fg = c.base.magenta },
+                        DashboardProject = { fg = c.base.blue },
+                        DashboardConfiguration = { fg = c.base.white },
+                        DashboardSession = { fg = c.base.green },
+                        DashboardLazy = { fg = c.base.cyan },
+                        DashboardServer = { fg = c.base.yellow },
+                        DashboardQuit = { fg = c.base.red },
+                    }
+                end
             })
         end
     }
