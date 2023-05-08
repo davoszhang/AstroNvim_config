@@ -9,10 +9,10 @@ return {
       "<CMD>Glance definitions<CR>",
       desc = "peek the definitions",
     },
-    ["gr"] = {
-      "<CMD>Glance references<CR>",
-      desc = "peek the references"
-    },
+    -- ["gr"] = {
+    --   "<CMD>Glance references<CR>",
+    --   desc = "peek the references"
+    -- },
     ["gh"] = {
       "<cmd>Lspsaga lsp_finder<CR>",
       desc = "lspsaga lsp finder"
