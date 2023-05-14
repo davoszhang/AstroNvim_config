@@ -8,7 +8,9 @@ return {
     -- event = "LspAttach",
     lazy = false,
     config = function()
-      require 'navigator'.setup()
+      require 'navigator'.setup({
+        transparency = 0
+      })
     end
   }
 }
