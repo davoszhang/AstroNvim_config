@@ -36,7 +36,7 @@ return {
           fields = { "abbr", "kind", "menu" },
           -- set lspkind format
           format = function(entry, vim_item)
-            local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 45 })(entry, vim_item)
+            local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 80 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             -- re set the kin
             kind.kind = " " .. (strings[1] or "")
