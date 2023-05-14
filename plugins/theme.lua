@@ -91,7 +91,7 @@ return {
                     tag_attribute = { italic = true },         -- attribute of tag in reactjs
                 },
                 background_clear = {
-                    -- "float_win",
+                    "float_win",
                     -- "toggleterm",
                     "telescope",
                     -- "neo-tree",
@@ -104,15 +104,11 @@ return {
                 },
                 override = function(c)
                     return {
-                        ColorColumn = { bg = c.base.dimmed3 },
-                        -- Mine
-                        DashboardRecent = { fg = c.base.magenta },
-                        DashboardProject = { fg = c.base.blue },
-                        DashboardConfiguration = { fg = c.base.white },
-                        DashboardSession = { fg = c.base.green },
-                        DashboardLazy = { fg = c.base.cyan },
-                        DashboardServer = { fg = c.base.yellow },
-                        DashboardQuit = { fg = c.base.red },
+                        CmpBackground = { bg = c.base.dimmed5 },
+                        -- NormalFloat = { bg = c.base.dimmed5 },
+                        -- NormalBorder = { bg = c.base.dimmed5 },
+                        -- GuihuaTextViewDark = { bg = c.base.dimmed5 },
+                        -- GuihuaListDark = { bg = c.base.dimmed5 }
                     }
                 end
             })
